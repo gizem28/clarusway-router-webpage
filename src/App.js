@@ -1,8 +1,12 @@
 
+import MyNav from "./components/MyNav";
+import Home from "./pages/Home";
+
 function App() {
   return (
-    <div className="container text-center mt-5">
-      <h1 />
+    <div>
+      <MyNav />
+      <Home />
     </div>
   );
 }
