@@ -6,8 +6,7 @@ import isa from "../img/isa.jpeg";
 
 const Slider = () => {
     return (
-        <div>
-            <Carousel fade autoPlay={true} interval={2000}>
+  <Carousel fade autoPlay={true} interval={2000}>
   <Carousel.Item>
     <img
       className="d-block w-100"
@@ -30,11 +29,8 @@ const Slider = () => {
       src={about}
       alt="Third slide"
     />
-
   </Carousel.Item>
 </Carousel>
-        </div>
     )
 }
-
 export default Slider

@@ -6,8 +6,8 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Footer from "./components/Footer";
 import FullStack from "./pages/FullStack";
-import Instructor from "./pages/Instructor";
-// import InstructorDetail from "./pages/InstructorDetail";
+import Instructors from "./pages/Instructors";
+import InstructorDetail from "./pages/InstructorDetail";
 
 function App() {
   return (
@@ -23,8 +23,8 @@ function App() {
         <Route path="/data-science" element={<FullStack />} />
         <Route path="/devops" element={<FullStack />} />
         {/* ************************************************* */}
-        <Route path="/instructor" element={<Instructor />} />
-        {/* <Route path="/instructor/:login" element={<InstructorDetail />} /> */}
+        <Route path="/instructors" element={<Instructors />} />
+        <Route path="/instructors/:login" element={<InstructorDetail />} />
       </Routes>
       <Footer />
     </BrowserRouter>

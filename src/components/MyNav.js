@@ -1,5 +1,5 @@
 import React from 'react';
-import {Nav, Container, Navbar, NavDropdown} from "react-bootstrap";
+import {Nav, Navbar, NavDropdown} from "react-bootstrap";
 import logo from "../img/logo.png";
 import { useNavigate } from 'react-router-dom';
 
@@ -9,32 +9,32 @@ const MyNav = () => {
   const navigate = useNavigate();
     return (
         //logoya tiklayan olursa eger home sayfasinda degilse home gec
-<div>
-<Navbar bg="light" expand="lg" onSelect={(eventKey)=>
-  eventKey ==="home" ? navigate("/"):navigate(`/${eventKey}`)}>
-  <Container>
-    <Navbar.Brand>
-    <Nav.Link  eventKey="home">
-      <img src={logo} alt="" />
-    </Nav.Link>
-        </Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="ms-auto">
-        <NavDropdown title="Courses" id="basic-nav-dropdown">
-          <NavDropdown.Item eventKey="developing">Full-Stack-Developing</NavDropdown.Item>
-          <NavDropdown.Item eventKey="data-science">Data-Science</NavDropdown.Item>
-          <NavDropdown.Item eventKey="devops">AWS-DEVOPS</NavDropdown.Item>
-        </NavDropdown>
-        <Nav.Link eventKey="about">About</Nav.Link>
-        <Nav.Link eventKey="instructors">Instructor</Nav.Link>
-        <Nav.Link eventKey="contact">Contact</Nav.Link>
-      </Nav>
-    </Navbar.Collapse>
-  </Container>
-</Navbar>
-        </div>
-    )
-}
-
-export default MyNav
+        <Navbar
+          bg="light"
+          expand="lg"
+          style={{height:90, marginBottom:0}}
+          onSelect={(eventKey) =>
+            eventKey === "home" ? navigate("/") : navigate(`/${eventKey}`)}>
+              <Nav.Link eventKey="home">
+                <img src={logo} alt=""  style={{height:65, marginLeft:20}}/>
+              </Nav.Link>
+              <Nav className="ms-auto" >
+                <NavDropdown className='h4'  style={{padding:15, fontWeight:"bold"}} title="Courses" id="basic-nav-dropdown">
+                  <NavDropdown.Item className='h4' eventKey="developing">
+                    Full-Stack-Developing
+                  </NavDropdown.Item>
+                  <NavDropdown.Item className='h4' eventKey="data-science">
+                    Data-Science
+                  </NavDropdown.Item>
+                  <NavDropdown.Item className='h4' eventKey="devops">
+                    AWD-DEVOPS
+                  </NavDropdown.Item>
+                </NavDropdown>
+                <Nav.Link eventKey="about" className='h4' style={{padding:20, fontWeight:"bold"}}>About</Nav.Link>
+                <Nav.Link eventKey="instructors" className='h4' style={{padding:20, fontWeight:"bold"}}>Instructors</Nav.Link>
+                <Nav.Link eventKey="contact" className='h4' style={{padding:20, fontWeight:"bold"}}>Contact</Nav.Link>
+              </Nav>
+        </Navbar>
+    );
+  };
+  export default MyNav;

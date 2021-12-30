@@ -5,7 +5,7 @@ import courseData from "../data/courseData";
 
 const Home = () => {
     return (
-        <div>
+        <div >
             <Slider/>
             <Courses data={courseData}/>
         </div>
