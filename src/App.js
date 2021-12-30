@@ -1,15 +1,20 @@
-
 import MyNav from "./components/MyNav";
 import Home from "./pages/Home";
-import Slider from "./components/Slider";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
-    <div>
+      //BrowserRouter diger componentleri sarmalamasi lazim
+      // MyNav her sayfada gorunecek
+      <BrowserRouter>
       <MyNav />
-      <Slider/>
-      <Home />
-    </div>
+      <Routes>
+      <Route path="/" element={<Home />}/>
+      </Routes>
+      <Footer/>
+      </BrowserRouter>
   );
 }
 export default App;
