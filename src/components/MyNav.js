@@ -8,8 +8,10 @@ const MyNav = () => {
   //useNavigate en ustte tanimlanmasi gereken bir hook
   const navigate = useNavigate();
     return (
+        //logoya tiklayan olursa eger home sayfasinda degilse home gec
 <div>
-<Navbar bg="light" expand="lg" onSelect={(eventKey)=> navigate(`/${eventKey}`)}>
+<Navbar bg="light" expand="lg" onSelect={(eventKey)=>
+  eventKey ==="home" ? navigate("/"):navigate(`/${eventKey}`)}>
   <Container>
     <Navbar.Brand>
     <Nav.Link  eventKey="home">
@@ -20,9 +22,9 @@ const MyNav = () => {
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ms-auto">
         <NavDropdown title="Courses" id="basic-nav-dropdown">
-          <NavDropdown.Item href="#action/3.1">Full-Stack-Developing</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2">Data-Science</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.3">AWS-DEVOPS</NavDropdown.Item>
+          <NavDropdown.Item eventKey="developing">Full-Stack-Developing</NavDropdown.Item>
+          <NavDropdown.Item eventKey="data-science">Data-Science</NavDropdown.Item>
+          <NavDropdown.Item eventKey="devops">AWS-DEVOPS</NavDropdown.Item>
         </NavDropdown>
         <Nav.Link eventKey="about">About</Nav.Link>
         <Nav.Link eventKey="instructors">Instructor</Nav.Link>
