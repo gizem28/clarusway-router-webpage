@@ -5,7 +5,7 @@ const About = () => {
     <Container style={{height:"81vh"}}  className="text-center mt-4">
       <Row>
         <Col className="d-flex align-item-center justify-content-center">
-          <img src={asset3} style={{height:590}} alt="" />
+          <img src={asset3} style={{height:570}} alt="" />
         </Col>
         <Col>
           <h1>Who We are?</h1>
