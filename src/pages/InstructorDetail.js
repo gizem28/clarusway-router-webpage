@@ -17,13 +17,13 @@ const InstructorDetail = () => {
   }, [url]);
 
   return (
-    <Container className="text-center mt-4">
-      <h1>NAME:{login}</h1>
-      <img src={avatar_url} alt="" />
-      <h3>{html_url}</h3>
+    <Container className="text-center mt-4" style={{height:"81vh"}}>
+      <h1>NAME: "{login}"</h1>
+      <img src={avatar_url} alt="" style={{borderRadius:10,margin:20 }}/>
+      <h4>{html_url}</h4>
       <h4>{company}</h4>
       <h4>{location}</h4>
-      <button className="btn-warning" onClick={() => navigate(-1)}>
+      <button className="btn-warning btn-lg" onClick={() => navigate(-1)}>
         Go Back
       </button>
     </Container>

@@ -4,15 +4,13 @@ import fs1 from "../img/fs1.png";
 
 const FullStack = () => {
   return (
-    <div style={{height:605}}>
-      <Container>
+      <Container style={{height:"81vh", marginTop:30}}>
         <Row>
           <Col md={12} lg={6}>
             <img src={fs1} alt="" className="w-100" />
           </Col>
           <Col>
             <h1>Full Stack Web Development Learning Path</h1>
-            <h2>Front-End & Back-End Development</h2>
             <p>
               We know there’s a high demand for professional Full Stack
               Developers and we’re committed to helping students learn all they
@@ -22,13 +20,20 @@ const FullStack = () => {
               excited about learning new things? Are you ready to give your
               career a boost?
             </p>
+            <h1 style={{ marginTop:30}}>Data Science Learning Path</h1>
+            <p>
+            You will learn how to extract knowledge and insights from different data types with our data science program. You’ll build data analysis and machine learning skills with real-world case studies, and hands-on exercises.
+            </p>
+            <h1 style={{marginTop:30}}>AWS-DEVOPS Learning Path</h1>
+            <p>
+            You will learn the fundamentals of cloud computing with using AWS in addition to learning Network basics, Linux, shell scripting, and Git.
+            </p>
             <Col>
-              <button className="btn btn-danger">Apply</button>
+              <button style={{marginTop:30}} className="btn btn-danger btn-lg">Apply</button>
             </Col>
           </Col>
         </Row>
       </Container>
-    </div>
   );
 };
 

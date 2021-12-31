@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import {Grid} from "@mui/material";
 
 const Instructors = () => {
   const navigate = useNavigate();
@@ -14,23 +15,25 @@ const Instructors = () => {
   }, []);
 
   return (
-    <div className="text-center">
-      <h1>OUR INSTRUCTORS</h1>
+    <div>
+    <h1 style={{margin:30, color:"grey", textAlign:"center"}}>OUR INSTRUCTORS</h1>
+    <br/>
+      <Grid container style={{paddingLeft:30}} rowSpacing={5} columnSpacing={{xs:3, sm:4, md:5}} >
       {users.map((user) => {
         const { id, login, avatar_url } = user;
         return (
-          <div key={id}>
-            <h2>{login}</h2>
+             <Grid item xs={4} key={id}>
             <img
               src={avatar_url}
               alt=""
-              style={{ cursor: "pointer", width: "300px" }}
-              onClick={() => navigate(`/instructors/${user.login}`)}
-            />
-          </div>
+              style={{cursor: "pointer", width: "300px",borderRadius:10 }}
+              onClick={() => navigate(`/instructors/${user.login}`)}/>
+              <h2 className="title" style={{color:"grey"}} >{login}</h2>
+              </Grid>
         );
       })}
-    </div>
+      </Grid>
+      </div>
   );
 };
 

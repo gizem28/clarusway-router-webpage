@@ -2,7 +2,7 @@ import { Col, Row, Container } from "react-bootstrap";
 import asset3 from "../img/Asset-3.png";
 const About = () => {
   return (
-    <Container className="text-center mt-4">
+    <Container style={{height:"81vh"}}  className="text-center mt-4">
       <Row>
         <Col className="d-flex align-item-center justify-content-center">
           <img src={asset3} style={{height:590}} alt="" />
